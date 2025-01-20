@@ -91,6 +91,7 @@ nav ul li:hover {
 
 .mainWrapper {
     display: grid;
+    position: relative;
     grid-template-columns: 150px auto;
     grid-template-rows: repeat(4 1fr);
 }
@@ -106,18 +107,30 @@ nav ul li:hover {
     z-index: 1;
 }
 
+.mainWrapper::before {
+    content: '';
+    position: absolute;
+    background: rgba(97, 97, 97, 0.365);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .content {
     display: flex;
     background-color: rgba(242, 242, 242, 0.13);
     backdrop-filter: blur(10px);
-    box-shadow: 10px 10px 30px 10px rgba(150, 150, 150, 0.733);
+    box-shadow: 10px 10px 30px 10px rgba(64, 64, 64, 0.733);
     border-radius: 10px;
     grid-column: 2;
-    grid-row: 2/3;
+    grid-row: 1/2;
     z-index: 999;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    height: fit-content;
+    margin: auto;
 }
 
 .text {
@@ -212,7 +225,7 @@ Button:hover {
 #copyright {
     position: absolute;
     right: 0;
-    bottom: 70px;
+    bottom: 0px;
     margin-right: 20px;
     z-index: 9999;
     color: hsl(0, 0%, 90%);
