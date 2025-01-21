@@ -396,6 +396,14 @@ span {
 /* Medium devices (small laptops, 1050px and up) */
 @media only screen and (max-width: 1050px) { 
 
+    nav {
+        transform: translateX(-300px);
+    }
+
+    #menubutton {
+        display: flex;
+    }
+
     .fontLarge {
         font-size: 2.4rem;
     }
