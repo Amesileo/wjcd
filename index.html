@@ -8,6 +8,11 @@
     <link rel="shortcut icon" href="./images/1fav.png" type="png">
 </head>
 <body>
+    <div id="menubutton" onclick="menuTransition()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -31,21 +36,21 @@
         <div class="content">
             <img id="logo" src="./images/1.png" alt="William James Creative Digital logo">
             <div class="text">
-                <h1 style="font-size: 3rem; color: var(--offwhite);">Building your brand in the <br><span class="highlight" style="color: var(--red);">Digital Space</span>.</h1>
+                <h1 class="fontLarge" style="color: var(--offwhite);">Building your brand in the <br><span class="highlight" style="color: var(--red);">Digital Space</span>.</h1>
                 <p style="color: var(--offwhite);">Websites, branding, digital strategy. <br>We've got your back.</p>
-                <a href="#servicesList"><button>See our services</button></a>
+                <a href="#servicesList"><button>see our services</button></a>
             </div>
         </div>
     </div>
     <div class="wrapper" style="background-color: var(--offwhite);">
-        <div style="width: 60%; padding: 30px">
-            <h1 style="font-size: 4rem;">Elevate Your Brand with our <span style="color: var(--red);">Digital Expertise</span>.</h1>
+        <div class="introWrapper">
+            <h1 class="fontLarger">Elevate Your Brand with our <span style="color: var(--red);">Digital Expertise</span>.</h1>
             <p>At <span class="intHighlight">William James</span>, we specialize in creating compelling digital experiences that <span class="intHighlight">bring brands to life</span>. With a focus on digital design, process management, and branding consultancy, we deliver <span class="intHighlight">tailored solutions</span> that <span class="intHighlight">drive growth</span>  and set your business apart in an ever-evolving digital landscape.</p>
         </div>
     </div>
     <div id="servicesList" style="background-color: var(--red); display: flex; flex-direction: column;">
-        <div style="width: 60%; padding: 30px; align-self: center; ">
-        <h1 style="font-size: 4rem; color: var(--offwhite);">Kickstart Your Success with our Services.</h1>
+        <div class="servicesWrapper">
+        <h1 class="fontLarger" style="color: var(--offwhite);">Kickstart Your Success with our Services.</h1>
         </div>
         <div class="servicesGrid">
             <div class="servicesCard">
@@ -66,6 +71,6 @@
         </div>
     </div>
 </div>
-    
+    <script src="./main.js"></script>
 </body>
 </html>
