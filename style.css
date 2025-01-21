@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: 100dvh;
     overflow-x: hidden;
 }
 
@@ -74,7 +74,7 @@ nav {
     flex-direction: column;
     position: fixed;
     width: 150px;
-    height: 100vh;
+    height: 100dvh;
     left: 0;
     z-index: 100000;
     background-color: #ff31317a;
@@ -128,8 +128,8 @@ nav ul li:hover {
 }
 
 .hero {
-    height: 90vh;
-    width: 100vw;
+    height: 90dvh;
+    width: 100dvw;
     background-image: url(./images/7989448-hd_1920_1080_25fps.mp4);
     background-repeat: no-repeat;
     background-size: cover;
@@ -257,7 +257,7 @@ Button:hover {
 }
 
 .wrapper {
-    width: 100vw;
+    width: 100dvw;
     display: flex;
 }
 
@@ -277,7 +277,7 @@ Button:hover {
 }
 
 .servicesCard {
-    max-width: 80vw;
+    max-width: 80dvw;
     width: fit-content;
     grid-row: auto;
     background-color: var(--offwhite);
@@ -417,7 +417,7 @@ span {
     }
 
     .servicesCard {
-    max-width: 80vw;
+    max-width: 80dvw;
     grid-row: auto;
     display: grid;
 }
