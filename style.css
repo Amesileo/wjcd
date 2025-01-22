@@ -103,6 +103,7 @@ nav ul li a {
     color: var(--offwhite);
     cursor: pointer;
     font-weight: 500;
+    font-style: "Inter", sans-serif;
     width: 100%;
     padding-left: 20px;
     padding-top: 10px;
