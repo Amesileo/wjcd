@@ -1,76 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William James. Creative Digital</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./images/1fav.png" type="png">
-</head>
-<body>
-    <div id="menubutton" onclick="menuTransition()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#servicesList">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-        <button class="navButton">contact us</button>
-        <img class="craftedLogo" src="./images/2.png" alt="Crafted by William James logo">
-    </nav>
-    <div class="mainWrapper">
-        <!-- <div class="hero">
-            <p id="copyright">© George William James, 2025</p>
-        </div> -->
-        <div style="z-index: -100; position: relative;">
-        <video autoplay muted loop class="hero" style="object-fit: cover; position: relative;">
-            <source  src="./images/7989448-hd_1920_1080_25fps.mp4" type="video/mp4">
-        </video>
-        </div>
-        <p id="copyright">© George William James, 2025</p>
-        <div class="content">
-            <img id="logo" src="./images/1.png" alt="William James Creative Digital logo">
-            <div class="text">
-                <h1 class="fontLarge" style="color: var(--offwhite);">Building your brand in the <br><span class="highlight" style="color: var(--red);">Digital Space</span>.</h1>
-                <p style="color: var(--offwhite);">Websites, branding, digital strategy. <br>We've got your back.</p>
-                <a href="#servicesList"><button>see our services</button></a>
-            </div>
-        </div>
-    </div>
-    <div class="wrapper" style="background-color: var(--offwhite);">
-        <div class="introWrapper">
-            <h1 class="fontLarger">Elevate Your Brand with our <span style="color: var(--red);">Digital Expertise</span>.</h1>
-            <p>At <span class="intHighlight">William James</span>, we specialize in creating compelling digital experiences that <span class="intHighlight">bring brands to life</span>. With a focus on digital design, process management, and branding consultancy, we deliver <span class="intHighlight">tailored solutions</span> that <span class="intHighlight">drive growth</span>  and set your business apart in an ever-evolving digital landscape.</p>
-        </div>
-    </div>
-    <div id="servicesList" style="background-color: var(--red); display: flex; flex-direction: column;">
-        <div class="servicesWrapper">
-        <h1 class="fontLarger" style="color: var(--offwhite);">Kickstart Your Success with our Services.</h1>
-        </div>
-        <div class="servicesGrid">
-            <div class="servicesCard">
-                <h1>Digital <br>Design<span style="color: var(--red);">.</span></h1>
-                <p>Beautiful, intuitive, and functional—our digital designs do more than just look good; they create lasting impressions. From website design to printed media, we craft engaging user experiences that capture your brand’s essence while ensuring seamless interaction. Every pixel, every detail, is designed with your audience in mind.</p>
-                <img class="cardImg" src="./images/digitaldesign.png">
-            </div>
-            <div class="servicesCard">
-                <h1>Process <br>Management<span style="color: var(--red);">.</span></h1>
-                <p>A smooth workflow is the backbone of any successful project. Our process management services are designed to streamline your operations, increase efficiency, and ensure your digital initiatives are executed flawlessly. With strategic planning and expert implementation, we keep your projects on track, on budget, and aligned with your goals.</p>
-                <img class="cardImg" src="./images/processmanagement.png">
-            </div>
-            <div class="servicesCard">
-                <h1>Branding <br>Consultancy<span style="color: var(--red);">.</span></h1>
-                <p>Your brand is more than a logo—it's a story, a promise, and a connection. We partner with you to refine your brand identity and strategy, ensuring it resonates with your target audience and reflects your business's true essence. Let us help you build a cohesive brand that stands out in the crowded digital space.</p>
-                <img class="cardImg" src="./images/brandingconsultancy.png">
-            </div>
-        </div>
-    </div>
-</div>
-    <script src="./main.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>William James Creative</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="./images/2.svg" type="svg" />
+	</head>
+	<body>
+		<div id="cursorOuter"></div>
+		<div id="cursorMid"></div>
+		<div id="cursorInner"></div>
+		<div class="loader-container" id="loader">
+			<div class="loader"></div>
+			<h1>just<br /><span>loading</span>...</h1>
+		</div>
+		<nav class="boxShadow">
+			<img
+				class="logo"
+				src="./images/2.svg"
+				alt="William James Creative logo"
+			/>
+			<ul>
+				<li onmouseenter="cursorSelect()" onmouseleave="cursorReturn()">
+					<a href="#portfolio">portfolio</a>
+				</li>
+			</ul>
+			<p
+				class="button BtnSecondary"
+				onmouseenter="cursorSelect()"
+				onmouseleave="cursorReturn()"
+				onclick="goTo('services')"
+			>
+				services
+			</p>
+			<p
+				class="button BtnPrimary"
+				onmouseenter="cursorSelect()"
+				onmouseleave="cursorReturn()"
+				onclick="goTo('contact')"
+			>
+				contact
+			</p>
+		</nav>
+		<div class="pageWrapper">
+			<div class="circlestripes"></div>
+			<div class="circlestripes cs2"></div>
+			<section>
+				<div class="content hero">
+					<div id="title">
+						<h1>
+							meet your new partners in the
+							<span class="highlight">Digital Space</span>.
+						</h1>
+						<p>
+							Digital Transformation can be scary,
+							<span class="highlight">but it doesn't have to be</span>.
+						</p>
+						<p
+							class="button BtnPrimary"
+							onclick="goTo('learn')"
+							onmouseenter="cursorSelect()"
+							onmouseleave="cursorReturn()"
+						>
+							learn more
+						</p>
+					</div>
+					<img
+						loading="eager"
+						class="heroImg boxShadow"
+						src="./images/pexels-cottonbro-4065876.jpg"
+						alt="Image of a laptop"
+					/>
+				</div>
+			</section>
+			<section>
+				<div id="learn" class="content">
+					<p>
+						We understand that designing, promoting and even just maintaining
+						your brand online can be a <strong>tricky</strong> process. <br />At
+						William James, we take pride in
+						<span class="highlight">our mission</span> to guide you effectively
+						and give you the tools you need to
+						<span class="highlight">empower your business</span>.
+					</p>
+				</div>
+			</section>
+			<section>
+				<div id="services" class="content">
+					<h1>
+						find your flow with our <span class="highlight">services</span>.
+					</h1>
+					<div class="cardContainer">
+						<div class="card">
+							<h1>web design</h1>
+							<img
+								loading="lazy"
+								class="cardImg"
+								src="./images/webDesign.svg"
+								alt="web design graphic"
+							/>
+						</div>
+						<div class="card">
+							<h1>branding</h1>
+							<img
+								loading="lazy"
+								class="cardImg"
+								src="./images/branding.svg"
+								alt="branding graphic"
+							/>
+						</div>
+						<div class="card">
+							<h1>process management</h1>
+							<img
+								loading="lazy"
+								class="cardImg"
+								src="./images/processManagement.svg"
+								alt="process management graphic"
+							/>
+						</div>
+						<div class="card">
+							<h1>IT consultancy</h1>
+							<img
+								loading="lazy"
+								class="cardImg"
+								src="./images/itConsultancy.svg"
+								alt="IT consultancy graphic"
+							/>
+						</div>
+						<div class="card">
+							<h1>and more</h1>
+							<img
+								loading="lazy"
+								class="cardImg"
+								src="./images/moreServices.svg"
+								alt="more generic services graphic"
+							/>
+						</div>
+					</div>
+					<p>
+						Let's schedule a meeting via Zoom or telephone to learn about you
+						and your business. What are your
+						<span class="highlight">goals</span>, your
+						<span class="highlight">aspirations</span> and your
+						<span class="highlight">challenges</span>?
+					</p>
+					<p>
+						At William James, we don’t just deliver services—we build
+						partnerships. We take the time to understand your vision, ensuring
+						that
+						<span class="highlight"
+							>every solution we provide is aligned with your success</span
+						>.
+					</p>
+				</div>
+			</section>
+			<section>
+				<div id="portfolio" class="content">
+					<h1>check out our <span class="highlight">latest work</span>.</h1>
+					<h2>
+						Ipswich Minster:
+						<span class="highlight">a complete website transformation</span>.
+					</h2>
+					<div class="portImgContainer">
+						<img
+							loading="lazy"
+							class="portImg"
+							src="./images/IMdesktop.png"
+							alt="Ipswich Minster website displayed on a desktop monitor"
+						/>
+						<img
+							loading="lazy"
+							class="portImg"
+							src="./images/IMphone.png"
+							alt="Ipswich Minster website displayed on a smartphone"
+						/>
+					</div>
+					<p>
+						<strong>It's not every day a church becomes a Minster.</strong> With
+						thousands of churches in the UK, there are only the 33 Minsters,
+						with Ipswich Minster being the latest.
+					</p>
+					<p>
+						To celebrate this historic occasion, Ipswich Minster partnered with
+						us to
+						<span class="highlight"
+							>unify their new branding and their digital footprint</span
+						>.
+					</p>
+					<p>
+						We delivered a <span class="highlight">new domain</span>,
+						<span class="highlight">new website</span>, and
+						<span class="highlight">consultancy</span> for the leadership of the
+						Church so that they can make use of their non-profit Microsoft
+						licensing effectively.
+					</p>
+					<p><span class="highlight">Amen</span>.</p>
+					<p>
+						Visit their
+						<a
+							onmouseenter="cursorSelect()"
+							onmouseleave="cursorReturn()"
+							href="https://ipswichminster.org"
+							>website</a
+						>.
+					</p>
+				</div>
+			</section>
+			<section>
+				<div id="contact" class="content">
+					<h1>let's <span class="highlight">talk</span>.</h1>
+					<p>
+						Give us a call or drop us an email. There's
+						<span class="highlight">no obligation</span>, and
+						<span class="highlight">no hidden costs</span>.
+					</p>
+					<div class="btnWrapper">
+						<a
+							onmouseenter="cursorSelect()"
+							onmouseleave="cursorReturn()"
+							class="button BtnSecondary"
+							href=""
+							>telephone</a
+						>
+						<a
+							onmouseenter="cursorSelect()"
+							onmouseleave="cursorReturn()"
+							class="button BtnPrimary"
+							href=""
+							>email</a
+						>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="boxShadowTop">
+			<div>
+				<p id="footerContact">
+					Get in touch<br />
+					<a href="tel:07865865600">call us</a><br />
+					<a href="mailto:georgewj@georgewilliamjames.co.uk">email us</a>
+				</p>
+				<p id="CR" style="color: #ffffff7d; align-self: end; margin-left: auto">
+					© George William James, 2025
+				</p>
+				<p
+					id="mobCR"
+					style="color: #ffffff7d; align-self: end; margin-left: auto"
+				>
+					© George<br />William<br />James,<br />2025
+				</p>
+				<img id="craftedLogo" src="./images/6.svg" alt="logo" />
+			</div>
+		</footer>
+		<script src="main.js"></script>
+		<script>
+			window.addEventListener("load", function () {
+				const loader = document.getElementById("loader");
+				setTimeout(() => {
+					loader.classList.add("hidden");
+				}, 1500); // Adjust the timeout as needed
+			});
+		</script>
+	</body>
 </html>
