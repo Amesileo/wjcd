@@ -23,7 +23,6 @@ html {
 body {
     background-color: var(--offwhite);
     width: inherit;
-    overflow-x: hidden !important; 
 }
 
 #cursorOuter, #cursorMid, #cursorInner {
@@ -265,6 +264,7 @@ a:hover {
 .pageWrapper {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .hero {
