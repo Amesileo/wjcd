@@ -431,7 +431,7 @@ section {
     padding-top: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 
     #cursorInner, #cursorMid, #cursorOuter {
         display: none;
@@ -446,8 +446,8 @@ section {
     #title {
         grid-area: 1 / 1; 
         margin-top: 50%;
-        background-color: #f6f4f000;
-        backdrop-filter: blur(5px);
+        background-color: #f6f4f091;
+        backdrop-filter: blur(10px);
         border-radius: 10px;
         padding: 10px;
     }
