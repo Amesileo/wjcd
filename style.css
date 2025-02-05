@@ -271,6 +271,7 @@ a:hover {
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 1;
+    overflow-x: clip;
 }
 
 #title {
