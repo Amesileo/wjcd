@@ -18,7 +18,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden  !important;
+    overflow-x: clip  !important;
 }
 
 body {
@@ -271,7 +271,7 @@ a:hover {
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 1;
-    overflow-x: clip;
+    
 }
 
 #title {
@@ -279,7 +279,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100dvw;
 
     >p {
